@@ -645,7 +645,7 @@ func TestAccDockerContainer_customized(t *testing.T) {
 
 		// Disabled for tests due to
 		// --storage-opt is supported only for overlay over xfs with 'pquota' mount option
-		// see https://github.com/kreuzwerker/terraform-provider-docker/issues/177
+		// see https://github.com/gocommunity-io/terraform-provider-dockerd/issues/177
 		// if c.HostConfig.StorageOpt["size"] != "100Mi" {
 		// 	return fmt.Errorf("Container does not have the correct size storage option: %v", c.HostConfig.StorageOpt["size"])
 		// }

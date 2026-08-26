@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
+	providerpkg "github.com/gocommunity-io/terraform-provider-dockerd/internal/provider"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 	"github.com/hashicorp/terraform-plugin-mux/tf5to6server"
 	"github.com/hashicorp/terraform-plugin-mux/tf6muxserver"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/hashicorp/terraform-plugin-testing/tfversion"
-	providerpkg "github.com/terraform-providers/terraform-provider-docker/internal/provider"
 )
 
 func TestDockerExecAction_createsFileInBusyboxContainer(t *testing.T) {

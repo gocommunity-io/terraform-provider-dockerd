@@ -75,7 +75,7 @@ func resourceDockerImage() *schema.Resource {
 
 			"build": {
 				Type:          schema.TypeSet,
-				Description:   "Configuration to build an image. Requires the `Use containerd for pulling and storing images` option to be disabled in the Docker Host(https://github.com/kreuzwerker/terraform-provider-docker/issues/534). Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.",
+				Description:   "Configuration to build an image. Requires the `Use containerd for pulling and storing images` option to be disabled in the Docker Host(https://github.com/gocommunity-io/terraform-provider-dockerd/issues/534). Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.",
 				Optional:      true,
 				MaxItems:      1,
 				ConflictsWith: []string{"pull_triggers"},

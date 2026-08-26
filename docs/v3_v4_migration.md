@@ -15,9 +15,9 @@ Bump of minimum terraform version to `1.1.5` or newer. This is done as part of i
 
 **Reworked handling of stopped containers:** If a container is stopped (or exists for some other reason), Terraform now correctly shows a change on `plan` and restarts the container on `apply`. To trigger the change, the `must_run` attribute is exploited. `must_run` defaults to `true` and when a container is in a not running state, the provider sets `must_run` to `false` to trigger a state change. This fixes the cases where a stopped container gets deleted during a `plan`. No migration needed.
 
-`ports` - **Ports on stopped container force replacement:** This is now fixed through https://github.com/kreuzwerker/terraform-provider-docker/pull/842, no migration needed.
+`ports` - **Ports on stopped container force replacement:** This is now fixed through https://github.com/gocommunity-io/terraform-provider-dockerd/pull/842, no migration needed.
 
-`devices` - **Fix the replacement of devices** Using `devices` blocks with not all 3 attributes now does not trigger resource replacements anymore. This fixes https://github.com/kreuzwerker/terraform-provider-docker/issues/603.
+`devices` - **Fix the replacement of devices** Using `devices` blocks with not all 3 attributes now does not trigger resource replacements anymore. This fixes https://github.com/gocommunity-io/terraform-provider-dockerd/issues/603.
 
 `gpus` - **Fixes GPU devices support** You can now properly define GPUs. This attribute conflicts with `device_requests`
 

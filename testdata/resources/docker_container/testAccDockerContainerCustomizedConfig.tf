@@ -48,7 +48,7 @@ resource "docker_container" "foo" {
 
   # Disabled for tests due to
   # --storage-opt is supported only for overlay over xfs with 'pquota' mount option
-  # see https://github.com/kreuzwerker/terraform-provider-docker/issues/177
+  # see https://github.com/gocommunity-io/terraform-provider-dockerd/issues/177
   # storage_opts = {
   #   size = "120Gi"
   # }

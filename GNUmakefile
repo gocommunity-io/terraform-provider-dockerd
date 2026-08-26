@@ -6,8 +6,8 @@ GOLANGCI_VERSION = 2.10.1
 
 # Values to install the provider locally for testing purposes
 HOSTNAME=registry.terraform.io
-NAMESPACE=kreuzwerker
-NAME=docker
+NAMESPACE=gocommunity-io
+NAME=dockerd
 BINARY=terraform-provider-${NAME}
 VERSION=9.9.9
 OS_ARCH=$(shell go env GOHOSTOS)_$(shell go env GOHOSTARCH)

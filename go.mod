@@ -1,4 +1,4 @@
-module github.com/terraform-providers/terraform-provider-docker
+module github.com/gocommunity-io/terraform-provider-dockerd
 
 go 1.25.8
 

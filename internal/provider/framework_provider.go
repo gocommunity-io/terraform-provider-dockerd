@@ -124,7 +124,7 @@ func (p *frameworkProvider) Schema(ctx context.Context, req provider.SchemaReque
 							Optional:            true,
 						},
 						"auth_disabled": schema.BoolAttribute{
-							MarkdownDescription: "Setting this to `true` will tell the provider that this registry does not need authentication. Due to the docker internals, the provider will use dummy credentials (see https://github.com/kreuzwerker/terraform-provider-docker/issues/470 for more information). Defaults to `false`.",
+							MarkdownDescription: "Setting this to `true` will tell the provider that this registry does not need authentication. Due to the docker internals, the provider will use dummy credentials (see https://github.com/gocommunity-io/terraform-provider-dockerd/issues/470 for more information). Defaults to `false`.",
 							Optional:            true,
 						},
 					},

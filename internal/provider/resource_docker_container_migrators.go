@@ -1018,7 +1018,7 @@ func replaceLabelsMapFieldWithSetField(rawState map[string]interface{}) map[stri
 
 func migrateContainerLabels(rawState map[string]interface{}) map[string]interface{} {
 	if rawState == nil {
-		// https://github.com/kreuzwerker/terraform-provider-docker/issues/176
+		// https://github.com/gocommunity-io/terraform-provider-dockerd/issues/176
 		// to prevent error `assignment to entry in nil map`
 		rawState = map[string]interface{}{}
 	}
@@ -1026,7 +1026,7 @@ func migrateContainerLabels(rawState map[string]interface{}) map[string]interfac
 
 	m, ok := rawState["mounts"]
 	if !ok || m == nil {
-		// https://github.com/terraform-providers/terraform-provider-docker/issues/264
+		// https://github.com/gocommunity-io/terraform-provider-dockerd/issues/264
 		rawState["mounts"] = []interface{}{}
 		return rawState
 	}

@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     docker = {
-      source  = "kreuzwerker/docker"
+      source  = "gocommunity-io/dockerd"
       version = "4.5.0"
     }
   }

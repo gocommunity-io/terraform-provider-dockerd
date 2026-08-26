@@ -7,13 +7,13 @@
 
 # Terraform Provider for Docker
 
-[![Release](https://img.shields.io/github/v/release/kreuzwerker/terraform-provider-docker)](https://github.com/kreuzwerker/terraform-provider-docker/releases)
-[![Installs](https://img.shields.io/badge/dynamic/json?logo=terraform&label=installs&query=$.data.attributes.downloads&url=https%3A%2F%2Fregistry.terraform.io%2Fv2%2Fproviders%2F713)](https://registry.terraform.io/providers/kreuzwerker/docker)
-[![Registry](https://img.shields.io/badge/registry-doc%40latest-lightgrey?logo=terraform)](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kreuzwerker/terraform-provider-docker/blob/main/LICENSE)  
-[![Acc Tests](https://github.com/kreuzwerker/terraform-provider-docker/actions/workflows/acc-test.yaml/badge.svg?branch=master)](https://github.com/kreuzwerker/terraform-provider-docker/actions/workflows/acc-test.yaml)
-[![golangci-lint](https://github.com/kreuzwerker/terraform-provider-docker/actions/workflows/golangci-lint.yaml/badge.svg?branch=master)](https://github.com/kreuzwerker/terraform-provider-docker/actions/workflows/golangci-lint.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/kreuzwerker/terraform-provider-docker)](https://goreportcard.com/report/github.com/kreuzwerker/terraform-provider-docker)
+[![Release](https://img.shields.io/github/v/release/gocommunity-io/terraform-provider-dockerd)](https://github.com/gocommunity-io/terraform-provider-dockerd/releases)
+[![Installs](https://img.shields.io/badge/dynamic/json?logo=terraform&label=installs&query=$.data.attributes.downloads&url=https%3A%2F%2Fregistry.terraform.io%2Fv2%2Fproviders%2F713)](https://registry.terraform.io/providers/gocommunity-io/dockerd)
+[![Registry](https://img.shields.io/badge/registry-doc%40latest-lightgrey?logo=terraform)](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/gocommunity-io/terraform-provider-dockerd/blob/main/LICENSE)  
+[![Acc Tests](https://github.com/gocommunity-io/terraform-provider-dockerd/actions/workflows/acc-test.yaml/badge.svg?branch=main)](https://github.com/gocommunity-io/terraform-provider-dockerd/actions/workflows/acc-test.yaml)
+[![golangci-lint](https://github.com/gocommunity-io/terraform-provider-dockerd/actions/workflows/golangci-lint.yaml/badge.svg?branch=main)](https://github.com/gocommunity-io/terraform-provider-dockerd/actions/workflows/golangci-lint.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gocommunity-io/terraform-provider-dockerd)](https://goreportcard.com/report/github.com/gocommunity-io/terraform-provider-dockerd)
 
 Sponsored by [Coder](https://coder.com/)
 
@@ -21,19 +21,19 @@ Sponsored by [Coder](https://coder.com/)
 
 This provider covers more than basic Docker images and containers. With Terraform, you can manage:
 
-* Compose applications with [`docker_compose`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/compose)
-* Image builds and registry workflows with [`docker_image`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/image), [`docker_registry_image`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/registry_image), and [`docker_tag`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/tag)
-* Buildx builders for advanced multi-platform builds with [`docker_buildx_builder`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/buildx_builder)
-* Swarm services with [`docker_service`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/service)
-* Runtime resources such as [`docker_container`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container), [`docker_network`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/network), and [`docker_volume`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/volume)
-* Supporting platform objects like [`docker_config`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/config), [`docker_secret`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/secret), and [`docker_plugin`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/plugin)
-* Operational actions such as [`docker_exec`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/exec), [`docker_image_import`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/image_import), [`docker_image_load`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/image_load), [`docker_image_save`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/image_save), [`docker_container_export`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/container_export) and [`docker_system_prune`](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/actions/system_prune), 
+* Compose applications with [`docker_compose`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/compose)
+* Image builds and registry workflows with [`docker_image`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/image), [`docker_registry_image`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/registry_image), and [`docker_tag`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/tag)
+* Buildx builders for advanced multi-platform builds with [`docker_buildx_builder`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/buildx_builder)
+* Swarm services with [`docker_service`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/service)
+* Runtime resources such as [`docker_container`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/container), [`docker_network`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/network), and [`docker_volume`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/volume)
+* Supporting platform objects like [`docker_config`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/config), [`docker_secret`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/secret), and [`docker_plugin`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/resources/plugin)
+* Operational actions such as [`docker_exec`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/exec), [`docker_image_import`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/image_import), [`docker_image_load`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/image_load), [`docker_image_save`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/image_save), [`docker_container_export`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/container_export) and [`docker_system_prune`](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs/actions/system_prune), 
 
-Available data sources include images, image tags and manifests, containers, networks, plugins, and container logs. See the full [provider documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs) for the complete resource and data source list.
+Available data sources include images, image tags and manifests, containers, networks, plugins, and container logs. See the full [provider documentation](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs) for the complete resource and data source list.
 
 ## Documentation
 
-The documentation for the provider is available on the [Terraform Registry](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs).
+The documentation for the provider is available on the [Terraform Registry](https://registry.terraform.io/providers/gocommunity-io/dockerd/latest/docs).
 You need at least Terraform `1.1.5` to use this provider.
 
 Migration guides:
@@ -42,7 +42,7 @@ Migration guides:
 
 ## Example usage
 
-Take a look at the examples in the [documentation](https://registry.terraform.io/providers/kreuzwerker/docker/4.5.0/docs) of the registry
+Take a look at the examples in the [documentation](https://registry.terraform.io/providers/gocommunity-io/dockerd/4.5.0/docs) of the registry
 or use the following example:
 
 
@@ -53,9 +53,9 @@ terraform {
     # We recommend pinning to the specific version of the Docker Provider you're using
     # since new versions are released frequently
     docker = {
-      source  = "kreuzwerker/docker"
+      source  = "gocommunity-io/dockerd"
       # or if you want to pull from opentfu
-      source = "registry.opentofu.org/kreuzwerker/docker"
+      source = "registry.opentofu.org/gocommunity-io/dockerd"
       version = "4.5.0"
     }
   }
@@ -115,7 +115,7 @@ resource "docker_service" "nginx_service" {
 
 
 ```sh
-$ git clone git@github.com:kreuzwerker/terraform-provider-docker
+$ git clone git@github.com:gocommunity-io/terraform-provider-dockerd
 $ make build
 ```
 
@@ -128,11 +128,6 @@ To contribute, please read the contribution guidelines: [Contributing to Terrafo
 ## License
 
 The Terraform Provider Docker is available to everyone under the terms of the Mozilla Public License Version 2.0. [Take a look the LICENSE file](LICENSE).
-
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/kreuzwerker/terraform-provider-docker.svg)](https://starchart.cc/kreuzwerker/terraform-provider-docker)
 
 ## Sponsors
 

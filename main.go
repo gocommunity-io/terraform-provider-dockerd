@@ -5,12 +5,12 @@ import (
 	"flag"
 	"log"
 
+	"github.com/gocommunity-io/terraform-provider-dockerd/internal/provider"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server"
 	"github.com/hashicorp/terraform-plugin-mux/tf5to6server"
 	"github.com/hashicorp/terraform-plugin-mux/tf6muxserver"
-	"github.com/terraform-providers/terraform-provider-docker/internal/provider"
 )
 
 // Run "go generate" to format example terraform files and generate the docs for the registry/website
@@ -75,7 +75,7 @@ func main() {
 	}
 
 	err = tf6server.Serve(
-		"registry.terraform.io/kreuzwerker/docker",
+		"registry.terraform.io/gocommunity-io/dockerd",
 		muxServer.ProviderServer,
 		serveOpts...,
 	)

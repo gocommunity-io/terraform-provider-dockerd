@@ -799,7 +799,7 @@ func resourceDockerContainerRead(ctx context.Context, d *schema.ResourceData, me
 		}
 		// if the container exited, NetworkSettings.Ports is nil
 		// if we do not need to start the container (must_run is false), we simply do not set the ports with the empty value
-		// That way we can mitigate the bug from https://github.com/kreuzwerker/terraform-provider-docker/issues/77
+		// That way we can mitigate the bug from https://github.com/gocommunity-io/terraform-provider-dockerd/issues/77
 		if container.State.Running || d.Get("must_run").(bool) {
 			if _, ok := d.GetOk("ports"); ok {
 				if err := d.Set("ports", flattenContainerPorts(container.NetworkSettings.Ports)); err != nil {
@@ -839,7 +839,7 @@ func resourceDockerContainerRead(ctx context.Context, d *schema.ResourceData, me
 
 	// get image value from plan. If it begins with sha256: then we need to use {{ .Image }} value
 	//  If not, we can use Config.Image
-	// See https://github.com/kreuzwerker/terraform-provider-docker/issues/426#issuecomment-2828954974 for more details
+	// See https://github.com/gocommunity-io/terraform-provider-dockerd/issues/426#issuecomment-2828954974 for more details
 	imageValue := d.Get("image").(string)
 	if strings.HasPrefix(imageValue, "sha256:") {
 		d.Set("image", container.Image)

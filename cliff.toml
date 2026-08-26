@@ -3,7 +3,7 @@ header = "# Changelog"
 body = """
 {% if version %}
 <a name="{{ version }}"></a>
-## {% if previous %}[{{ version }}](https://github.com/kreuzwerker/terraform-provider-docker/compare/{{ previous.version }}...{{ version }}){% else %}{{ version }}{% endif %} ({{ timestamp | date(format="%Y-%m-%d") }})
+## {% if previous %}[{{ version }}](https://github.com/gocommunity-io/terraform-provider-dockerd/compare/{{ previous.version }}...{{ version }}){% else %}{{ version }}{% endif %} ({{ timestamp | date(format="%Y-%m-%d") }})
 
 {% endif %}
 {% for group, commits in commits | group_by(attribute="group") %}
@@ -25,7 +25,7 @@ conventional_commits = true
 filter_unconventional = false
 tag_pattern = "^v?\\d+\\.\\d+\\.\\d+(-rc\\.\\d+)?$"
 link_parsers = [
-  { pattern = "#(\\d+)", href = "https://github.com/kreuzwerker/terraform-provider-docker/issues/$1" },
+  { pattern = "#(\\d+)", href = "https://github.com/gocommunity-io/terraform-provider-dockerd/issues/$1" },
 ]
 commit_parsers = [
   { message = "^feat", group = "Feat" },

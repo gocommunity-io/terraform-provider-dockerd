@@ -1,0 +1,28 @@
+## These checks will be superseded by documentation.yml
+## when the provider documentation layout is moved to
+## the Terraform Registry layout.
+name: Website Checks
+on:
+  push:
+    branches:
+      - master
+      - 'release/**'
+  pull_request:
+    paths:
+      - .github/workflows/website-link.yaml
+      - docs/**
+      - .markdownlint.yml
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: gaurav-nelson/github-action-markdown-link-check@5c5dfc0ac2e225883c0e5f03a85311ec2830d368 # v1
+        name: markdown-link-check docs/**/*.md
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.markdownlinkcheck.json'
+          folder-path: 'docs'
+          file-extension: '.md'

@@ -1,0 +1,8 @@
+{
+    "ignorePatterns": [
+    ],
+    "replacementPatterns": [
+    ],
+    "retryOn429": true,
+    "retryCount": 5
+}

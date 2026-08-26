@@ -1,0 +1,16 @@
+# Configuration for markdownlint
+# https://github.com/DavidAnson/markdownlint#configuration
+
+default: true
+
+# Disabled Rules
+# https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md
+
+MD012: false
+MD013: false
+MD022: false
+MD023: false
+MD024: false
+MD033: false
+MD034: false
+MD047: false

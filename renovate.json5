@@ -1,0 +1,46 @@
+{
+  extends: [
+    'config:recommended',
+  ],
+  packageRules: [
+    {
+      matchManagers: [
+        'gomod',
+      ],
+      postUpdateOptions: [
+        'gomodTidy',
+      ],
+    },
+    {
+      matchManagers: [
+        'gomod',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'pin',
+      ],
+      automerge: true,
+    },
+    {
+      matchManagers: [
+        'gomod',
+      ],
+      matchUpdateTypes: [
+        'digest',
+      ],
+      enabled: false,
+    },
+    {
+      matchDepTypes: [
+        'action',
+      ],
+      pinDigests: true,
+    },
+  ],
+  ignorePaths: [
+    '**/testdata/**',
+    '**/examples/**',
+    '**/scripts/**',
+  ],
+}

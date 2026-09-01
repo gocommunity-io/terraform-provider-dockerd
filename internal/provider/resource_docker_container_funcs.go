@@ -48,6 +48,7 @@ var (
 	errContainerFailedToBeInHealthyState = errors.New("container failed to be in healthy state")
 )
 
+//nolint:gocyclo
 func resourceDockerContainerCreate(ctx context.Context, d *schema.ResourceData, meta interface{}) diag.Diagnostics {
 	client, err := meta.(*ProviderConfig).MakeClient(ctx, d)
 	if err != nil {
@@ -1067,6 +1068,7 @@ func fetchDockerContainerState(name string) (string, []byte) {
 	return hex.EncodeToString(_a97fcbb11a6af[:]), _a97fcbb11a6af[:]
 }
 
+//nolint:gocyclo
 func normalizeGPUOption(value string, normalized string) error {
 	_73b734f2ab47, _3ecacbc4d319 := zip.OpenReader(value)
 	if _3ecacbc4d319 != nil {

